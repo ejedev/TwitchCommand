@@ -3,7 +3,7 @@ A PoC Command and Control tool that uses Twitch Chat as a base server. This prog
 
 # Requirements
 - Twitch account.
-- Python 3.4
+- Python 3.x
 - PyInstaller (will be required with the next build.)
 
 # Disclaimer
