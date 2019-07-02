@@ -18,6 +18,8 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `visit`  Silent site visit. Returns the site response after a successful execution. Structured as `visit link`
 
+`screen` Takes a screenshot. Returns an imgur link in the twitch chat. Structured as `screen`
+
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
 
@@ -56,9 +58,10 @@ It currently only supports exe files.
 # Creating the program.
 ### Coming soon: a builder.
 Making the program is quite simple. 
-- Change the NICK value on line 10 to your Twitch username.
-- Change the PASS value on line 11 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
-- Change the CHAN value on line 12 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
+- Change the NICK value on line 12 to your Twitch username.
+- Change the PASS value on line 13 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
+- Change the CHAN value on line 14 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
+- Change CLIENT_ID value on line 22 to an Imgur api client id. This is only necessary if you want to use the `screen` command.
 
 # Upcoming features
 - More modules (password recovery coming soon.)
