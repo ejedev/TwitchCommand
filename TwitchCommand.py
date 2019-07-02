@@ -53,6 +53,9 @@ def main():
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
+                    else:
+                        chat(s, "incorrect command usage.")
+
         sleep(1)
 
 
