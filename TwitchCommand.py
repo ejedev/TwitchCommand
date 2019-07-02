@@ -48,7 +48,6 @@ def main():
             #Legacy but possible use in only allowing one user to issue commands
             #username = re.search(r"\w+", response).group(0)
             message = CHAT_MSG.sub("", response)
-            print(message)
             if message == "!list\r\n":
                 chat(s, clientName + " is online.")
             elif message.startswith('!act'):
