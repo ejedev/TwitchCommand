@@ -3,15 +3,30 @@ from time import sleep
 import socket
 import os
 import urllib.request
+import smtplib, ssl
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-NICK = "username"
+NICK = "user"
 PASS = "oauth:"
 CHAN = "#channel"
 RATE = (20 / 30)
 CHAT_MSG = re.compile(r"^:\w+!\w+@\w+\.tmi\.twitch\.tv PRIVMSG #\w+ :")
 clientName = os.environ['COMPUTERNAME']
+EMAIL= 'default@mail.com'
+EPASS = 'root'
+EPORT = 465  # For SSL
+smtp_server = "smtp.gmail.com"
+
+
+def send_mail(receiver, subject, content):
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL(smtp_server, EPORT, context=context) as server:
+        server.login(EMAIL, EPASS)
+        SUBJECT = "TwitchCommand: " + subject
+        TEXT = str(content)
+        message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
+        server.sendmail(EMAIL, receiver, message)
 
 def main():
     try:
