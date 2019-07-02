@@ -4,8 +4,6 @@ import socket
 import os
 import urllib.request
 import smtplib, ssl
-import pyscreenshot as screenshot
-import pyimgur
 
 HOST = "irc.twitch.tv"
 PORT = 6667
