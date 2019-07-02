@@ -45,6 +45,6 @@ Making the program is quite simple.
 - Change the CHAN value on line 10 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
 
 # Upcoming features
-- More modules.
+- More modules (download+execute and password recovery coming soon.)
 - A builder to simplify making the program as well as making it an exe.
 - Whatever else I feel like.
