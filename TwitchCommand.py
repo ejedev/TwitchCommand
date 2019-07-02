@@ -3,7 +3,7 @@ from time import sleep
 import socket
 import os
 import urllib.request
-
+#Set username and password below. Use an OAuth for the password (read the github page for more information.)
 HOST = "irc.twitch.tv"
 PORT = 6667
 NICK = "username"
