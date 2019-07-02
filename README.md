@@ -18,8 +18,6 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `visit`  Silently visits a website. Structured as `visit link`
 
-`screen` Takes a screenshot. Returns an imgur link in the twitch chat. Structured as `screen`
-
 ### Screen currently does not work. I'm fixing it now.
 
 # Usage
