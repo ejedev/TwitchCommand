@@ -21,19 +21,16 @@ def main_loop():
         s.send("JOIN {}\r\n".format(CHAN).encode("utf-8"))
         connected = True
         chat(s, clientName + " connected.")
-    except Exception as e:
-        print(str(e))
+    except:
         connected = False
 
     while connected:
         response = s.recv(1024).decode("utf-8")
         if response == "PING :tmi.twitch.tv\r\n":
             s.send("PONG :tmi.twitch.tv\r\n".encode())
-            print("PONG")
         else:
             username = re.search(r"\w+", response).group(0)
             message = CHAT_MSG.sub("", response)
-            #this block will be used for creating custom responses
             if message == "!list\r\n":
                 chat(s, clientName + " is online.")
             elif message.startswith('!act'):
@@ -45,8 +42,6 @@ def main_loop():
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + e)
-
-            print(username + ": " + message)
         sleep(1)
 
 
