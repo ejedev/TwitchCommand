@@ -16,7 +16,7 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `de` Download and execute. File is removed after execution. Structured as `de link`
 
-`visit`  Silent site visit. Returns the site response after a successful execution. Structured as `visit link`
+`visit`  Silently visits a website. Structured as `visit link`
 
 `screen` Takes a screenshot. Returns an imgur link in the twitch chat. Structured as `screen`
 
