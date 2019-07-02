@@ -18,11 +18,15 @@ Currently the program only has one main feature which is a cmd command. It will 
 Navigate to the twitch page of the channel you selected when making the program.
 
 Upon connection to a server, a new client will announce its presence and client name. If you would like to view a list of all connected clients please use the list command. 
+
 ![New Connection.](https://i.imgur.com/fT6yice.png)
+
 ```
 !list
 ```
+
 ![List connections.](https://i.imgur.com/RY81sGt.png)
+
 This program also features a cmd command. It can be used on a per-user basis or as a mass command to all connected client.
 ```
 !act client command action true
@@ -37,7 +41,9 @@ An example command would be as follows:
 ```
 !act all cmd start. true
 ```
+
 ![Client action.](https://i.imgur.com/g7d5P83.png)
+
 This would open the current directory on every connected clients PC.
 
 # Creating the program.
