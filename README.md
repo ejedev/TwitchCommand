@@ -38,7 +38,7 @@ An example command would be as follows:
 This would open the current directory on every connected clients PC.
 
 # Creating the program.
-## Coming soon: a builder.
+### Coming soon: a builder.
 Making the program is quite simple. 
 - Change the NICK value on line 8 to your Twitch username.
 - Change the PASS value on line 9 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
