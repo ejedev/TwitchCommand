@@ -12,7 +12,7 @@ RATE = (20 / 30)
 CHAT_MSG = re.compile(r"^:\w+!\w+@\w+\.tmi\.twitch\.tv PRIVMSG #\w+ :")
 clientName = os.environ['COMPUTERNAME']
 
-def main_loop():
+def main():
     try:
         s = socket.socket()
         s.connect((HOST, PORT))
@@ -48,6 +48,4 @@ def main_loop():
 def chat(sock, msg):
     sock.send("PRIVMSG {} :{}".format(CHAN, msg+"\r\n").encode())
 
-
-if __name__ == "__main__":
-    main_loop()
+main()
