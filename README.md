@@ -20,6 +20,8 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `screen` Takes a screenshot. Returns an imgur link in the twitch chat. Structured as `screen`
 
+### Screen currently does not work. I'm fixing it now.
+
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
 
