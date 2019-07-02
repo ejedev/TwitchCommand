@@ -56,4 +56,5 @@ Making the program is quite simple.
 # Upcoming features
 - More modules (download+execute and password recovery coming soon.)
 - A builder to simplify making the program as well as making it an exe.
+- Command line based control module as an alternative to the twitch website.
 - Whatever else I feel like.
