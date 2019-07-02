@@ -14,7 +14,7 @@ This program was created as a Proof of Concept and it is not intended to be used
 # Features
 `cmd`  Windows CMD commands. Structured as `cmd command`
 
-`de` Download and execute. File is removed after execution. Structured as `de link`
+`de` Download and execute. File is removed after execution. Structured as `de link`. May throw `Win5 Error` if the user is prompted for UAC.
 
 `visit`  Silently visits a website. Structured as `visit link`
 
