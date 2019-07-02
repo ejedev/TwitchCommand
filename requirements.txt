@@ -1,6 +1,1 @@
-urllib
-os
-socket
-time
-re
 urllib3
