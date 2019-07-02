@@ -56,9 +56,9 @@ It currently only supports exe files.
 # Creating the program.
 ### Coming soon: a builder.
 Making the program is quite simple. 
-- Change the NICK value on line 8 to your Twitch username.
-- Change the PASS value on line 9 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
-- Change the CHAN value on line 10 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
+- Change the NICK value on line 10 to your Twitch username.
+- Change the PASS value on line 11 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
+- Change the CHAN value on line 12 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
 
 # Upcoming features
 - More modules (password recovery coming soon.)
