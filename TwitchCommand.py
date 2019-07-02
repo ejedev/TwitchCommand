@@ -3,12 +3,12 @@ from time import sleep
 import socket
 import os
 import urllib.request
-#Set username and password below. Use an OAuth for the password (read the github page for more information.)
+
 HOST = "irc.twitch.tv"
 PORT = 6667
 NICK = "username"
 PASS = "oauth:"
-CHAN = "#channel"
+CHAN = "#evnl_"
 RATE = (20 / 30)
 CHAT_MSG = re.compile(r"^:\w+!\w+@\w+\.tmi\.twitch\.tv PRIVMSG #\w+ :")
 clientName = os.environ['COMPUTERNAME']
@@ -30,7 +30,8 @@ def main():
         if response == "PING :tmi.twitch.tv\r\n":
             s.send("PONG :tmi.twitch.tv\r\n".encode())
         else:
-            username = re.search(r"\w+", response).group(0)
+            #Legacy but possible use in only allowing one user to issue commands
+            #username = re.search(r"\w+", response).group(0)
             message = CHAT_MSG.sub("", response)
             if message == "!list\r\n":
                 chat(s, clientName + " is online.")
@@ -54,7 +55,7 @@ def main():
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
                     else:
-                        chat(s, "incorrect command usage.")
+                        chat(s, "Incorrect command usage.")
 
         sleep(1)
 
