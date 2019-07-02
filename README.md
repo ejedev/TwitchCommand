@@ -61,10 +61,10 @@ Making the program is quite simple.
 - Change the NICK value on line 12 to your Twitch username.
 - Change the PASS value on line 13 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
 - Change the CHAN value on line 14 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
-- Change CLIENT_ID value on line 22 to an Imgur api client id. This is only necessary if you want to use the `screen` command.
+- Change CLIENT_ID value on line 22 to an Imgur api client id. This is only necessary if you want to use the `screen` command. THis command is currently not in the program as it was added too early and is not ready. It will be coming soon.
 
 # Upcoming features
-- More modules (password recovery coming soon.)
+- More modules (password recovery and screenshot coming soon.)
 - Download & execute supporting all file types.
 - Removing the requirement for 'true' in commands (proper scrubbing.)
 - A builder to simplify making the program as well as making it an exe.
