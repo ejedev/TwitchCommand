@@ -56,6 +56,8 @@ It currently only supports exe files.
 
 # Creating the program.
 ### Coming soon: a builder.
+The requirements list is currently not necessary but will be for future builds.
+
 Making the program is quite simple. 
 - Change the NICK value on line 10 to your Twitch username.
 - Change the PASS value on line 11 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
