@@ -4,10 +4,11 @@ import socket
 import os
 import urllib.request
 import smtplib, ssl
+import platform
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-NICK = "user"
+NICK = "username"
 PASS = "oauth:"
 CHAN = "#channel"
 RATE = (20 / 30)
@@ -80,6 +81,12 @@ def main():
                     elif messageArray[2] == 'exit':
                         chat(s, clientName + " has been disconnected.")
                         connected = False
+                    elif messageArray[2] == 'info':
+                        try:
+                            osInfo = platform.system() + " " + platform.release() + ", " + platform.version()
+                            chat(s, clientName + " is running " + osInfo + ". The IP address is " + socket.gethostbyname(socket.gethostname()))
+                        except Exception as e:
+                            chat(s, clientName + " encountered an error. " + str(e))
                     else:
                         chat(s, "Incorrect command usage.")
         sleep(1)
