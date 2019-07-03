@@ -11,12 +11,14 @@ The usage of this program directly violates the Twitch Developer Agreement. The 
 
 This program was created as a Proof of Concept and it is not intended to be used in a malicious way. I am not responsible for any damages or criminal charges that come from using it.
 
-# Features
+# Features/Modules
 `cmd`  Windows CMD commands. Structured as `cmd command`
 
 `de` Download and execute. File is removed after execution. Structured as `de link`. May throw `Win5 Error` if the user is prompted for UAC.
 
 `visit`  Silently visits a website. Structured as `visit link`
+
+`exit` Disconnects the tageted client(s). This does not remove the file. Structured as `exit`
 
 
 # Usage
