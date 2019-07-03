@@ -76,6 +76,9 @@ def main():
                             chat(s, clientName + " completed the command.")
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
+                    elif messageArray[2] == 'exit':
+                        chat(s, clientName + " has been disconnected.")
+                        connected = False
                     else:
                         chat(s, "Incorrect command usage.")
         sleep(1)
