@@ -22,6 +22,8 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `info` Returns the clients OS (including exact version) and IP address. Structured as `info`
 
+`mbox` Opens a messagebox on the users pc. Structured as `mbox message`
+
 
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
@@ -72,3 +74,7 @@ Making the program is quite simple.
 - Shellcode execution module (maybe.)
 - A builder to simplify making the program as well as making it an exe.
 - Command line based control module as an alternative to the twitch website.
+
+# Acknowledgements
+- n00py and Coalfire Research for inspiration from the [Slackor project.](https://github.com/Coalfire-Research/Slackor)
+- nathanlopez from the Stick project for the `mbox` [code.](https://github.com/nathanlopez/Stitch/blob/master/PyLib/popup.py)
