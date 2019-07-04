@@ -1,4 +1,4 @@
-# TwitchCommand [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
+# TwitchCommand [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) [!Canadian Mental Health Association](https://i.imgur.com/BymnzEX.png)](https://cmha.ca/donate)
 A remote administration tool that uses Twitch Chat as a Command and Control server. This program connects clients to a designated Twitch Chat and listens for commands.
 
 # Requirements
