@@ -67,7 +67,8 @@ Making the program is quite simple.
 - CLIENT_ID and the email information are currently not in use. The email functions will be used for password recovery and the CLIENT_ID will be a Imgur API client ID for screenshot uploads.
 
 # Upcoming features
-- More modules (password recovery and screenshot coming soon.)
-- Download & execute supporting all file types.
+- Password recovery module.
+- Screenshot module.
+- Shellcode execution module (maybe.)
 - A builder to simplify making the program as well as making it an exe.
 - Command line based control module as an alternative to the twitch website.
