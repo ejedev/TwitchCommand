@@ -77,4 +77,4 @@ Making the program is quite simple.
 
 # Acknowledgements
 - n00py and Coalfire Research for inspiration from the [Slackor project.](https://github.com/Coalfire-Research/Slackor)
-- nathanlopez from the Stick project for the `mbox` [code.](https://github.com/nathanlopez/Stitch/blob/master/PyLib/popup.py)
+- nathanlopez from the Stitch project for the `mbox` [code.](https://github.com/nathanlopez/Stitch/blob/master/PyLib/popup.py)
