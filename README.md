@@ -24,6 +24,8 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `mbox` Opens a messagebox on the users pc. Structured as `mbox message`
 
+`askpass` Prompts the user to enter their password then returns the value. Strctured as `askpass`
+
 
 # Usage
 Navigate to the twitch page of the channel you selected when making the program.
@@ -63,9 +65,9 @@ An example download+execute command would be:
 The requirements list is currently not necessary but will be for future builds.
 
 Making the program is quite simple. 
-- Change the NICK value on line 11 to your Twitch username.
-- Change the PASS value on line 12 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
-- Change the CHAN value on line 13 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
+- Change the NICK value on line 12 to your Twitch username.
+- Change the PASS value on line 13 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
+- Change the CHAN value on line 14 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
 - CLIENT_ID and the email information are currently not in use. The email functions will be used for password recovery and the CLIENT_ID will be a Imgur API client ID for screenshot uploads.
 
 # Upcoming features
@@ -77,4 +79,4 @@ Making the program is quite simple.
 
 # Acknowledgements
 - n00py and Coalfire Research for inspiration from the [Slackor project.](https://github.com/Coalfire-Research/Slackor)
-- nathanlopez from the Stitch project for the `mbox` [code.](https://github.com/nathanlopez/Stitch/blob/master/PyLib/popup.py)
+- nathanlopez from the Stitch project for the `mbox` and `askpass `[code.](https://github.com/nathanlopez/Stitch/blob/master/PyLib/popup.py)
