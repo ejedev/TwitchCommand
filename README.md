@@ -24,7 +24,7 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `mbox` Opens a messagebox on the users pc. Structured as `mbox message`
 
-`askpass` Prompts the user to enter their password then returns the value. Strctured as `askpass`
+`askpass` Prompts the user to enter their password then returns the value. Structured as `askpass`
 
 
 # Usage
