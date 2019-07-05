@@ -18,7 +18,7 @@ This program was created as a Proof of Concept and it is not intended to be used
 
 `visit`  Silently visits a website. Structured as `visit link`
 
-`exit` Disconnects the tageted client(s). This does not remove the file. Structured as `exit`
+`exit` Disconnects the targeted client(s). This does not remove the file. Structured as `exit`
 
 `info` Returns the clients OS (including exact version) and IP address. Structured as `info`
 
@@ -68,7 +68,7 @@ Making the program is quite simple.
 - Change the NICK value on line 12 to your Twitch username.
 - Change the PASS value on line 13 to your OAuth password (acquire it here: https://twitchapps.com/tmi/)
 - Change the CHAN value on line 14 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
-- CLIENT_ID and the email information are currently not in use. The email functions will be used for password recovery and the CLIENT_ID will be a Imgur API client ID for screenshot uploads.
+- CLIENT_ID and the email information are currently not in use. The email functions will be used for password recovery and the CLIENT_ID will be an Imgur API client ID for screenshot uploads.
 
 # Upcoming features
 - Password recovery module.
