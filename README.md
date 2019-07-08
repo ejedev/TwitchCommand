@@ -70,6 +70,8 @@ Making the program is quite simple.
 - Change the CHAN value on line 14 to a desired channel to listen in. It's recommended to use your personal twitch chat as a streamer may ban an account they see posting odd messages and commands.
 - CLIENT_ID and the email information are currently not in use. The email functions will be used for password recovery and the CLIENT_ID will be an Imgur API client ID for screenshot uploads.
 
+Build the created python file with PyInstaller. Make sure you pass the --windowed and --onefile arguments.
+
 # Upcoming features
 - Password recovery module.
 - Screenshot module.
